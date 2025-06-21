@@ -29,7 +29,7 @@ function App() {
   const [showSearchAreaButton, setShowSearchAreaButton] = useState(false); // show the "search this area" button
   const [searchCategory, setSearchCategory] = useState<string | undefined>(); // the selected category
   const [searchResults, setSearchResults] = useState<SearchFeature[]>([]); // an array of search results
-  const [mapBounds, setMapBounds] = useState<number[][] | undefined>(); // the current map bounds
+  const [mapBounds, setMapBounds] = useState<number[][] | undefined>();     // the current map bounds
   const [searchBounds, setSearchBounds] = useState<number[][] | undefined>(); // the bounds of the search results
 
   // function to perform a category search using the SearchBoxCore() instance
@@ -42,7 +42,6 @@ function App() {
     });
     setSearchResults(features);
     setSearchBounds(mapBounds);
-
     console.log("Search results:", features);
   };
 
